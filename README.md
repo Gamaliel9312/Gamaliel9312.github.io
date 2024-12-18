@@ -17,5 +17,5 @@ This is a simple portfolio project to showcase my skills and projects as a junio
 
 ## 📧 Contact
 Feel free to reach me at:  
-**Email:** your.email@gmail.com  
-**LinkedIn:** [My Profile](https://linkedin.com/in/yourprofile)
+**Email:** uibg9312@gmail.com  
+
