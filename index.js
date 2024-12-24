@@ -1,35 +1,32 @@
-// Esperar a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
-    // Animación suave del scroll para enlaces de navegación
-    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-    smoothScrollLinks.forEach(anchor => {
-        anchor.addEventListener('click', event => {
-            event.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+// Smooth scrolling para los enlaces de navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
 
-    // Función para animar las tarjetas de proyecto al entrar en el viewport
-    const projectCards = document.querySelectorAll('.project-card');
-    const observerOptions = {
-        threshold: 0.2, // El 20% del elemento visible activa la animación
-    };
+// Animación para mostrar la navegación cuando se hace scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const currentScroll = window.pageYOffset;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Dejar de observar el elemento
-            }
-        });
-    }, observerOptions);
+    if (currentScroll <= 0) {
+        header.classList.remove('scroll-up');
+        return;
+    }
 
-    // Observar todas las tarjetas de proyectos
-    projectCards.forEach(card => observer.observe(card));
+    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+        // Scroll hacia abajo
+        header.classList.remove('scroll-up');
+        header.classList.add('scroll-down');
+    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+        // Scroll hacia arriba
+        header.classList.remove('scroll-down');
+        header.classList.add('scroll-up');
+    }
+    lastScroll = currentScroll;
 });
