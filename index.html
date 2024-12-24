@@ -1,43 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Mi Portafolio - Desarrollador Junior</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Python Junior Developer | Web Projects</p>
+        <div class="geometric-bg"></div>
+        <div class="hero">
+            <h1>Tu Nombre</h1>
+            <p>Desarrollador Web Junior</p>
+            <p>Transformando ideas en experiencias digitales excepcionales</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I’m a junior Python developer with experience in web development. Explore my projects!</p>
-        </section>
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <section class="projects">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/300" alt="Proyecto 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Dashboard</h3>
+                        <p>Desarrollo de un panel de control completo para gestionar ventas online, incluyendo análisis en tiempo real y gestión de inventario.</p>
+                        <div class="skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Task Manager</h3>
-                <p>A task management app built using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="project">
-                <h3>Weather App</h3>
-                <p>An app that consumes a weather API and displays the daily forecast.</p>
-            </div>
-        </section>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/300" alt="Proyecto 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>App de Fitness</h3>
+                        <p>Aplicación móvil para seguimiento de rutinas de ejercicio, con planes personalizados y seguimiento de progreso.</p>
+                        <div class="skills">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/300" alt="Proyecto 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Blog Personal</h3>
+                        <p>Plataforma de blog con sistema de gestión de contenido personalizado y optimización SEO.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Prisma</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>Created by Your Name | 2024</p>
-    </footer>
-
-    <script src="index.js"></script>
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">¿Listo para crear algo increíble?</h2>
+            <p>Estoy disponible para nuevas oportunidades y colaboraciones</p>
+            <div class="social-links">
+                <a href="mailto:tuemail@ejemplo.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/tuusuario" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
